@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+    <!-- ===========    PRINCIPAIS  ============= -->
+    <definition name="default" template="/WEB-INF/views/default.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/includes/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/includes/menu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/includes/footer.jsp" />
+    </definition>
+
+    <definition name="editor_default" template="/WEB-INF/views/editor/index.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/editor/includes/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/editor/includes/menu.jsp" />
+        <!--<put-attribute name="footer" value="/WEB-INF/views/editor/includes/footer.jsp" />-->
+    </definition>
+
+    <definition name="public" template="/WEB-INF/views/default.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/includes/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/includes/footer.jsp" />
+    </definition>
+
+
+
+
+    <!-- ===========    VIEWS  ============= -->
+    <definition name="index" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/includes/inicio.jsp" />
+    </definition>
+
+    <definition name="noticias" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/includes/noticias.jsp" />
+    </definition>
+
+    <definition name="noticia" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/includes/noticia.jsp" />
+    </definition>
+
+    <definition name="ocorrencias" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/includes/ocorrencias.jsp" />
+    </definition>
+
+    <definition name="ocorrencia" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/includes/ocorrencia.jsp" />
+    </definition>
+    
+    
+    
+
+    <!-- ===========    ESTÁTICAS  ============= -->
+    <!-- CONHEÇA O PROGRAMA -->
+    <definition name="programa" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/programa.jsp" />
+    </definition>
+    
+    <!-- CONHEÇA OS CENTROS DE RECURSOS -->
+    <definition name="centrosderecursos" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/centrosderecursos.jsp" />
+    </definition>
+    
+    <!-- CURSOS -->
+    <definition name="cursos" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/cursos.jsp" />
+    </definition>
+    
+    <!-- OUVIDORIA -->
+    <definition name="ouvidoria" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/ouvidoria.jsp" />
+    </definition>
+    
+    <!-- FALE CONOSCO -->
+    <definition name="faleconosco" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/faleconosco.jsp" />
+    </definition>
+
+
+
+
+    <!-- ===========    EDITOR  ============= -->
+    <definition name="editor" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/login.jsp" />
+    </definition>
+
+
+    <definition name="informativos/novo" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/informativo.jsp" />
+    </definition>
+
+    <definition name="informativos/lista" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/visualizar_informativos.jsp" />
+    </definition>
+
+    <definition name="ocorrencias/novo" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/ocorrencia.jsp" />
+    </definition>
+
+    <definition name="ocorrencias/lista" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/visualizar_ocorrencias.jsp" />
+    </definition>
+
+    <definition name="ocorrencias/comentarios" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/visualizar_comentarios.jsp" />
+    </definition>
+
+    <definition name="galeria/novo" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/novo_galeria.jsp" />
+    </definition>
+
+    <definition name="galeria/fotos" extends="editor_default">
+        <put-attribute name="body" value="/WEB-INF/views/editor/includes/fotos.jsp" />
+    </definition>
+
+
+  <!-- =========== ERROR PAGES ============ -->
+    <definition name="resourceNotFound" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/resourceNotFound.jsp" />
+    </definition>
+
+    <definition name="uncaughtException" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/uncaughtException.jsp" />
+    </definition>
+
+    <definition name="dataAccessFailure" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/uncaughtException.jsp" />
+    </definition>
+
+</tiles-definitions>
