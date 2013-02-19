@@ -75,6 +75,16 @@
     <definition name="faleconosco" extends="default">
         <put-attribute name="body" value="/WEB-INF/views/estaticas/faleconosco.jsp" />
     </definition>
+    
+    <!-- LINKS ÚTEIS -->
+    <definition name="links" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/links.jsp" />
+    </definition>
+    
+    <!-- PARCEIROS -->
+    <definition name="parceiros" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/parceiros.jsp" />
+    </definition>
 
 
 

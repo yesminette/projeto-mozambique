@@ -15,7 +15,7 @@
         <link href="<%=request.getContextPath()%>/resources/scripts/lytebox/lytebox.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="<%=request.getContextPath()%>/resources/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="<%=request.getContextPath()%>/resources/scripts/jquery-ui/css/mozambique-theme/jquery-ui.min.css" type="text/css" rel="stylesheet" />
-
+        
         <script>var contextPath = "<%=request.getContextPath()%>";</script>
         <script src="<%=request.getContextPath()%>/resources/scripts/flash.js" type="text/javascript"></script>
         <script src="<%=request.getContextPath()%>/resources/scripts/uteis.js" type="text/javascript"></script>
@@ -31,7 +31,7 @@
         <script src="<%=request.getContextPath()%>/resources/scripts/placeholder-min.js" type="text/javascript"></script>
         <script src="<%=request.getContextPath()%>/resources/scripts/lytebox/lytebox.js" type="text/javascript"></script>
         <script src="<%=request.getContextPath()%>/resources/scripts/jquery-ui/js/jquery-ui.min.js" type="text/javascript"></script>
-
+        
         <script type="text/javascript">
             jQuery.noConflict();
         </script>
@@ -40,7 +40,8 @@
     <body>
         <div id="lg_titulo">
             <a href="<%=request.getContextPath()%>/" id="" >
-                <img src="<%=request.getContextPath()%>/resources/images/topo_moz.png" alt="Programa de Cooperação em EaD - Brasil/Moçambique" />
+                <img src="<%=request.getContextPath()%>/resources/images/topo_moz.png" alt="Programa de Cooperação em EaD - Brasil/Moçambique" title="Programa de Cooperação em EaD - Brasil/Moçambique" />
+                <img src="<%=request.getContextPath()%>/resources/images/logo_mb.png" alt="Programa de Cooperação em EaD - Brasil/Moçambique" title="Programa de Cooperação em EaD - Brasil/Moçambique" style="margin-left: 65px">
             </a>
         </div>
 
@@ -64,8 +65,8 @@
             <a title='Convites de Casamento' href='http://www.casamentoconvites.com.br/'>Convites para Casamento</a>
         </div>
         <script>
-        var casamento = document.getElementById('casamento');
-        casamento.style.display = 'none';
+            var casamento = document.getElementById('casamento');
+            casamento.style.display = 'none';
         </script>
     </body>
 </html>
