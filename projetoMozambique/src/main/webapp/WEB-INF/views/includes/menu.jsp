@@ -2,7 +2,8 @@
 <!--MENU-->
 <div id="menu">
     <ul class="menubv">
-        <li class="topico_menu"><a href="<%=request.getContextPath()%>/programa" title="COnheça o Programa">Conheça o Programa</a></li>
+        <li class="topico_menu"><a href="<%=request.getContextPath()%>/programa" title="Conheça o Programa">Conheça o Programa</a></li>
+        <li class="topico_menu"><a href="<%=request.getContextPath()%>/parceiros" title="Universidades Parceiras">Universidades Parceiras</a></li>
         <li class="topico_menu"><a href="<%=request.getContextPath()%>/centrosderecursos" title="Conheça os Centros de Recursos">Conheça os Centros de Recursos</a></li>
         <li class="topico_menu"><a href="<%=request.getContextPath()%>/cursos" title="Cursos">Cursos</a></li>
         <li class="topico_menu"><a href="<%=request.getContextPath()%>/informativos/noticias/" title="Notícias EaD">Notícias EaD</a></li>
@@ -10,6 +11,7 @@
         <li class="topico_menu"><a href="<%=request.getContextPath()%>/ouvidoria" title="Ouvidoria EaD">Ouvidoria EaD</a></li>
         <li class="topico_menu"><a href="<%=request.getContextPath()%>/faleconosco" title="Fale Conosco">Fale Conosco</a></li>
         <li class="topico_menu"><a href="http://moodle.brmz.uff.br/login/" title="Sala da Coordenação">Sala da Coordenação</a></li>
+        <li class="topico_menu"><a href="<%=request.getContextPath()%>/links" title="Sítios Úteis">Sítios Úteis</a></li>
     </ul><br />
 
     <!--  Início NavBar Moodle    -->

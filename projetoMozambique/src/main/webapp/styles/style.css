@@ -83,7 +83,7 @@ h2{
     height:120px;
     font-size:5pt;
     width: 966px;
-    margin-top:30px;
+    margin-top:60px;
     margin-bottom: 30px;
     text-align: left;
     border-top:#ccc 1px dotted;
@@ -100,7 +100,6 @@ h2{
     vertical-align: middle;
     /*background-image: url(../images/bg_imagem_noticia.gif);*/
 }
-
 
 #imagem_noticia{
     width: 200px;

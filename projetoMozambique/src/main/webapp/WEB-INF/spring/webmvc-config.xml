@@ -31,6 +31,8 @@
     <mvc:view-controller path="/cursos" />
     <mvc:view-controller path="/faleconosco" />
     <mvc:view-controller path="/ouvidoria" />
+    <mvc:view-controller path="/links" />
+    <mvc:view-controller path="/parceiros" />
     <mvc:view-controller path="/uncaughtException"/>
     <mvc:view-controller path="/resourceNotFound"/>
     <mvc:view-controller path="/dataAccessFailure"/>
