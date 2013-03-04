@@ -18,13 +18,8 @@
             </a>
         </p>
         <p>
-            <a href="#">
-                Site do CEDN/UEM
-            </a>
-        </p>
-        <p>
-            <a href="#">
-                Site da EaD em Moçambique
+            <a href="http://www.cend.uem.mz">
+                Site do CEND/UEM
             </a>
         </p>
     </div>

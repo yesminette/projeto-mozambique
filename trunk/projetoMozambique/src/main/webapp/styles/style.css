@@ -1,16 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 html{
-    background: url('../images/background.png') no-repeat center top scroll transparent;
-    -webkit-background-size: cover;
+    background: url('../images/background.png') repeat-x right -7px scroll transparent;
+    /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
 body{
     font-family:Verdana, Geneva, sans-serif;
     font-size:9pt;
     margin: 0px 0px 0px 0px;
+    background: url("../images/background2.png") no-repeat scroll -120px -7px transparent;
 }
 p{
     font-size: 9pt;
@@ -74,7 +75,6 @@ h2{
     margin-right: 5px;
 }
 
-
 .paginacao_footer{
     text-align: center;
 }
@@ -83,7 +83,7 @@ h2{
     height:120px;
     font-size:5pt;
     width: 966px;
-    margin-top:60px;
+    margin-top:10px;
     margin-bottom: 30px;
     text-align: left;
     border-top:#ccc 1px dotted;
@@ -114,8 +114,6 @@ h2{
     text-align: right;
     border-right: 1pt;
     /*    border-right-color: red;*/
-
-
 }
 #conteudo_noticia{
     margin: 10px;
@@ -126,10 +124,10 @@ h2{
 }
 .paginas li{
     margin-left: 10px;
-    border: #612405 1pt solid;
+    border: #555 1pt solid;
     padding: 5pt 6pt 3pt 6pt;
     cursor: pointer;
-    color: #612405;
+    color: #555;
 }
 
 .paginas li:hover {
@@ -138,7 +136,7 @@ h2{
 
 }
 #pagina_atual {
-    background-color:#612405;
+    background-color:#555;
     color: #fff;
 }
 
@@ -164,19 +162,19 @@ h2{
     margin-left: -492px;
     border:#ccc 0px solid;
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 #lg_titulo{
     position: relative;
     left: 50%;
-    margin-left: -406px;
+    margin-left: -282px;
     height: 120px;
-    margin-top: 15px;
+    padding-top: 15px;
     max-width: 880px;
 }
 #lg_titulo a{
-    margin-left: 128px;
+    margin-left: 0px;
 }
 /*#lg_ciarufg #titulo{
     float: left;
@@ -238,7 +236,7 @@ h2{
     padding:6px;
     vertical-align: middle;
     margin: 30px 5px 5px;
-    border: 1px solid #612405;
+    border: 1px solid #555;
     background-color: #EDE4D4;
 }
 
@@ -268,7 +266,7 @@ h2{
 input,textarea{
     background-color:#ede4d4;
     border-style:solid;
-    border-color:#612405;
+    border-color:#555;
     border-width:1pt;
     margin-top:3px;
     color:#333;
@@ -280,7 +278,7 @@ input,textarea{
 select{
     background-color:#fff;
     border-style:solid;
-    border-color:#612405;
+    border-color:#555;
     border-width:1pt;
     margin-top:3px;
     color:#333;
@@ -301,8 +299,8 @@ textarea{
     width:60px;
     height:20px;
     border-style:solid;
-    border-color:#612405;
-    background-color: #612405;
+    border-color:#555;
+    background-color: #555;
     cursor: pointer;
     color: #fff;
 }
@@ -413,7 +411,7 @@ li{
     color: #8f3608;
 }
 #noticias_todas .topico{
-    color: #612405;
+    color: #555;
 }
 #noticias_todas .topico:hover{
     color: #8f3608;
@@ -489,7 +487,7 @@ li{
     width:335px;
     font-size:9pt;
     font-weight:bolder;
-    color: #612405;
+    color: #555;
 }
 .topico_box{
     width:335px;
@@ -525,7 +523,7 @@ table#main_layout td {
     color:#777;
 }
 .img_chamada{
-    border:#612405 solid 2px;
+    border:#555 solid 2px;
 }
 .box{
 }
@@ -533,7 +531,7 @@ table#main_layout td {
     font-size: 8pt;
 }
 a:link{
-    color:#612405;
+    color:#555;
     text-decoration:none;
 }
 
@@ -545,7 +543,7 @@ a:hover{
 a:visited{
     text-decoration:none;
     cursor:pointer;
-    color:#612405;
+    color:#555;
 }
 
 a img{
@@ -729,7 +727,7 @@ body { margin:0 }
     top: 0;		
 }
 #slideshow li .slideshow-caption {
-    background:#612405;
+    background:#555;
     right: 0;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -852,4 +850,36 @@ body { margin:0 }
 
 .star{
     background: url('../images/blue_star.png') no-repeat scroll 40px center !important;
+}
+
+.linkmoodle{
+    display: none;
+}
+
+.mostrarmoodles{
+    color: #555555;
+    cursor: pointer;
+}
+
+.mostrarmoodles:hover{
+    color: #000;
+}
+
+.imagem_programa{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.legenda{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.lytebox .foto{
+    height: 60px;
 }

@@ -76,6 +76,11 @@
         <put-attribute name="body" value="/WEB-INF/views/estaticas/faleconosco.jsp" />
     </definition>
     
+    <!-- CONTATO -->
+    <definition name="contato" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/estaticas/contato.jsp" />
+    </definition>
+    
     <!-- LINKS ÚTEIS -->
     <definition name="links" extends="default">
         <put-attribute name="body" value="/WEB-INF/views/estaticas/links.jsp" />

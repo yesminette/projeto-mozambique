@@ -1,13 +1,13 @@
 <style type="text/css">
-.box_parceiros {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    margin: 5px 15px;
-}
-.box * {
-    vertical-align: middle;
-}
+    .box_parceiros {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        margin: 5px 15px;
+    }
+    .box * {
+        vertical-align: middle;
+    }
 </style>
 <div id='footer'>
     <table style='width: 100%'>
@@ -39,17 +39,14 @@
             <tr>
                 <td style="width: 50%;font-size: 8pt;">
                     <span>
-                        [Nome Institucional]
+                        Programa de Apoio à Expansão da Educação Superior a Distância na República de Moçambique - Cooperação Moçambique-Brasil
                     </span>
                     <br />
         <adress>
             <span>
-                [Telefones para contato]
+                +258-84-713-7145
             </span>
             <br />
-            <span>
-                [Endereço]
-            </span>
         </adress>
         </td>
         <td align='right' style="width: 50%;font-size: 7pt;">

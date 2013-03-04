@@ -40,8 +40,8 @@
     <body>
         <div id="lg_titulo">
             <a href="<%=request.getContextPath()%>/" id="" >
+                <!--<img src="<%=request.getContextPath()%>/resources/images/logo_mb.png" alt="Programa de Cooperação em EaD - Brasil/Moçambique" title="Programa de Cooperação em EaD - Brasil/Moçambique" style="margin-right: 26px">-->
                 <img src="<%=request.getContextPath()%>/resources/images/topo_moz.png" alt="Programa de Cooperação em EaD - Brasil/Moçambique" title="Programa de Cooperação em EaD - Brasil/Moçambique" />
-                <img src="<%=request.getContextPath()%>/resources/images/logo_mb.png" alt="Programa de Cooperação em EaD - Brasil/Moçambique" title="Programa de Cooperação em EaD - Brasil/Moçambique" style="margin-left: 65px">
             </a>
         </div>
 

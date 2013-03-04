@@ -12,6 +12,20 @@
 <div id="abas" class="aba ui-tabs-panel ui-widget-content ui-corner-bottom">
     <p class="ui-widget-header">Fale Conosco</p>
     <div class="conteudo">
-        <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dF9pYV92NUVERmtNbHQ0Zkt5UDFoenc6MQ&hl=pt_br" width="760" height="1200" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
+        <p>
+            Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)
+        </p>
+        <p>
+            Diretoria de Educação a Distância (DED)
+        </p>
+        <p>
+            Setor Bancário Norte, Quadra 2, Bloco L, Lote 06, CEP 70040-020. Brasília/DF. Brasil.
+        </p>
+        <p>
+            E-mail: <a href="mailto:uabmz@capes.gov.br">uabmz@capes.gov.br</a>
+        </p>
+        <p>
+            Telefone: + 55 61 2022 6400
+        </p>
     </div>
 </div>
