@@ -5,21 +5,7 @@
     jQuery(function() {
         jQuery("#abas").tabs();
     });
-    jQuery(document).ready(function(){
-        jQuery("#local_texto").html(jQuery("#texto"));
-        jQuery("#texto").css("display", "block");
-    });
 </script>
-<div id="texto" class="aba ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none">
-    <p style="margin-top:0px;">
-        Lorem ipsum Dollor, sit amet.Lorem ipsum Dollor, sit amet.Lorem ipsum Dollor, 
-        sit amet.Lorem ipsum Dollor, sit amet.Lorem ipsum Dollor, sit amet.
-    </p>
-    <p>
-        Lorem ipsum Dollor, sit amet.Lorem ipsum Dollor, sit amet.Lorem ipsum Dollor, 
-        sit amet.Lorem ipsum Dollor, sit amet.Lorem ipsum Dollor, sit amet.
-    </p>
-</div>
 <div id="abas">
     <div id="local_texto"></div>
     <ul>

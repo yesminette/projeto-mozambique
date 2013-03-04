@@ -14,8 +14,8 @@
 %>
 <div id="accordion">
     <%
-                if (ocorrencias.size() > 0) {
-                    for (Ocorrencia ocorrencia : ocorrencias) {
+        if (ocorrencias.size() > 0) {
+            for (Ocorrencia ocorrencia : ocorrencias) {
     %><h3><a href='#'><%=ocorrencia.getNome()%> <span class="data"><%=DataConverter.converterData(ocorrencia.getInicio(), Data.DDMMAAAA)%> - <%=DataConverter.converterData(ocorrencia.getFim(), Data.DDMMAAAA)%></span></a></h3>
     <div>
         <a href="<%=request.getContextPath()%>/ocorrencias/alterar/<%=ocorrencia.getId()%>">Editar</a> |
@@ -23,32 +23,37 @@
         <a href="<%=request.getContextPath()%>/ocorrencias/<%=ocorrencia.getId()%>/comentarios">Comentarios</a>
     </div>
     <%
-                        }
+        }
     %>
 </div>
 <%
-            } else {
-                out.print("Não há ocorrências cadastradas.");
-            }
+    } else {
+        out.print("Não há ocorrências cadastradas.");
+    }
 %>
 <script>
-    $(function() {
-        $( "#accordion" ).accordion();
-    });
+    <%
+        if (ocorrencias.size() > 0) {
+    %>
+        $(function() {
+            $( "#accordion" ).accordion();
+        });
+    <%        }
+    %>
 
-    function excluir(id){
-        var x = window.confirm("Tem certeza de que deseja excluir essa ocorrência?");
-        if (x){
-            var form = document.createElement("form");
-            form.setAttribute("method", "POST");
-            form.setAttribute("action", "<%=request.getContextPath()%>/ocorrencias/"+id);
-            var deleteHiddenField = document.createElement("input");
-            deleteHiddenField.setAttribute("name", "_method");
-            deleteHiddenField.setAttribute("value", "DELETE");
-            deleteHiddenField.setAttribute("type", "hidden");
-            form.appendChild(deleteHiddenField);
-            document.body.appendChild(form);
-            form.submit();
+        function excluir(id){
+            var x = window.confirm("Tem certeza de que deseja excluir essa ocorrência?");
+            if (x){
+                var form = document.createElement("form");
+                form.setAttribute("method", "POST");
+                form.setAttribute("action", "<%=request.getContextPath()%>/ocorrencias/"+id);
+                var deleteHiddenField = document.createElement("input");
+                deleteHiddenField.setAttribute("name", "_method");
+                deleteHiddenField.setAttribute("value", "DELETE");
+                deleteHiddenField.setAttribute("type", "hidden");
+                form.appendChild(deleteHiddenField);
+                document.body.appendChild(form);
+                form.submit();
+            }
         }
-    }
 </script>
