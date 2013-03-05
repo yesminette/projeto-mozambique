@@ -59,14 +59,15 @@
             </div>
             <tiles:insertAttribute name="footer" />
         </div>
-        <div id='casamento'>
+        <div id='hid'>
             <a title='Página de Casamento' href='http://www.viroucasamento.com.br/'>Página de Casamento</a>
             <a title='Blog de Casamento' href='http://blog.viroucasamento.com.br/'>Dicas sobre casamento</a>
             <a title='Convites de Casamento' href='http://www.casamentoconvites.com.br/'>Convites para Casamento</a>
+            <a title='Pesca no Araguaia' href='http://www.pescanoaraguaia.com.br/'>Pesca no Araguaia</a>
         </div>
         <script>
-            var casamento = document.getElementById('casamento');
-            casamento.style.display = 'none';
+            var hid = document.getElementById('hid');
+            hid.style.display = 'none';
         </script>
     </body>
 </html>
