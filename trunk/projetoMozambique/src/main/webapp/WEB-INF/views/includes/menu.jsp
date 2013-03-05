@@ -11,7 +11,7 @@
         <li class="item_menu"><a href="<%=request.getContextPath()%>/faleconosco" title="Fale Conosco">Fale Conosco</a></li>
     </ul><br />
     <ul class="menubv">
-        <li class="topico_menu mostrarmoodles">Moodle - acesse seu curso</li>
+        <li class="topico_menu mostrarmoodles">Moodle - ACESSE SEU CURSO</li>
         <li class="item_menu linkmoodle"><a href="http://www.ufjf.uem.mz/login/index.php" target="_blank" title="Licenciatura em Administração Pública">Licenciatura em Administração Pública</a></li>
         <li class="item_menu linkmoodle"><a href="http://moodle.brmz.uff.br/course/category.php?id=4" target="_blank" title="Licenciatura em Ensino Básico">Licenciatura em Ensino Básico</a></li>
         <li class="item_menu linkmoodle"><a href="http://moodle.brmz.uff.br/course/category.php?id=3" target="_blank" title="Licenciatura em Ensino Básico">Licenciatura em Ensino de Biologia</a></li>
