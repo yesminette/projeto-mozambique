@@ -12,14 +12,14 @@ function Lytebox(bInitialize, aHttp) {
 		// English - configure for your language or customize as needed. 
 		// Note that these values will be seen by users when mousing over buttons.
 		this.label = new Object();
-		this.label['close']		= 'Close (Esc)';
-		this.label['prev'] 		= 'Previous (\u2190)';	// Previous (left arrow)
-		this.label['next'] 		= 'Next (\u2192)'; 		// Next (right arrow)
-		this.label['play'] 		= 'Play (spacebar)';
-		this.label['pause'] 	= 'Pause (spacebar)';
-		this.label['print'] 	= 'Print';
-		this.label['image'] 	= 'Image %1 of %2';		// %1 = active image, %2 = total images
-		this.label['page'] 		= 'Page %1 of %2'; 		// %1 = active page, %2 = total pages
+		this.label['close']		= 'Fechar (Esc)';
+		this.label['prev'] 		= 'Anterior (\u2190)';	// Previous (left arrow)
+		this.label['next'] 		= 'Próximo (\u2192)'; 		// Next (right arrow)
+		this.label['play'] 		= 'Iniciar (barra de espaço)';
+		this.label['pause'] 	= 'Pausar (barra de espaço)';
+		this.label['print'] 	= 'Imprimir';
+		this.label['image'] 	= 'Imagem %1 de %2';		// %1 = active image, %2 = total images
+		this.label['page'] 		= 'Página %1 de %2'; 		// %1 = active page, %2 = total pages
 		
 	
 	/*** Configure Lytebox ***/

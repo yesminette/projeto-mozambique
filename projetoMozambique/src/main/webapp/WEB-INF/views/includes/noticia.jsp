@@ -1,3 +1,5 @@
+<%@page import="br.ciar.infraestrutura.ParametrosDoSistema"%>
+<%@page import="br.ciar.domain.informativos.fotografia.Foto"%>
 <%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="br.ciar.domain.informativos.Noticia"%>
 <%@page import="br.ciar.utils.DataConverter.Data"%>
@@ -36,23 +38,39 @@
         <%    }
         %>
         <div id="conteudo_noticia">
-            <% if (informativo instanceof Noticia) {
-                    Noticia noticia = (Noticia) informativo;
-            %>
             <p id="descricao_noticia" style="font-style: italic">
                 <%=informativo.getDescricao()%>
             </p>
             <div id="box_imagem_noticia" style="margin: 35px 0px">
-                <img alt=""  src="<%=caminhoImagem%>" id="imagem_noticia_<%=informativo.getId()%>" onerror="this.remove()" />
+                <img alt=""  src="<%=caminhoImagem%>" id="imagem_noticia_<%=informativo.getId()%>" onerror="this.remove()" style="max-width: 720px" />
             </div>
-            <%  if (noticia.temGaleria()) {%>
-            <a href="/resources/gallery.swf?numero=<%=noticia.getGaleria().getId()%>" rel="lightbox" title="<%=noticia.getTitulo()%>" TAG="SWF" width="700" height="600" ><img src="/resources/images/fotos_icon.gif" width="150px" alt="Galeria" /></a>
-                <%}
-                    }%>
-                <%=(!informativo.getId().equals(CFG.ID_CLIPPING)) ? "<p>" : ""%>
-                <%=informativo.getConteudo()%>
-                <%=(!informativo.getId().equals(CFG.ID_CLIPPING)) ? "</p>" : ""%>
+            <%=(!informativo.getId().equals(CFG.ID_CLIPPING)) ? "<p>" : ""%>
+            <%=informativo.getConteudo()%>
+            <%=(!informativo.getId().equals(CFG.ID_CLIPPING)) ? "</p>" : ""%>
 
+            <% if (informativo instanceof Noticia) {
+                    Noticia noticia = (Noticia) informativo;
+                    if (noticia.temGaleria()) {%>
+            <div style="margin: 40px 0px 20px;">
+                Fotos (clique para ampliar):
+            </div>
+            <div style="margin: 20px 30px">
+                <%
+                    for (Foto foto : noticia.getGaleria().getFotos()) {
+                        String imagemFoto = ParametrosDoSistema.getCaminhoRelativoGaleria(request) + foto.getId() + ".jpg";
+                        String thumbFoto = ParametrosDoSistema.getCaminhoRelativoThumbsGaleria(request) + foto.getId() + ".jpg";
+                %>
+                <a href="<%=imagemFoto%>" class="lytebox" data-lyte-options="group:fotosg<%=noticia.getGaleria().getId()%> doAnimations:false" data-description="<%=foto.getLegenda()%>" >
+                    <img src="<%=thumbFoto%>" class="foto" title="Clique para ampliar" />
+                </a>
+                <%
+                    }
+                %>
+            </div>
+            <%
+                    }
+                }
+            %>
         </div>
     </div>
 </div>
