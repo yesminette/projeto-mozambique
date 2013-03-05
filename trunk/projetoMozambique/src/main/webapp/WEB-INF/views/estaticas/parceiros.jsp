@@ -54,20 +54,6 @@
                 </tr>
                 <tr>
                     <td class="img_parceiros" style="text-align: center;">
-                        <a href="http://www.ufrj.br" title="Universidade Federal do Rio de Janeiro">
-                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/ufrj.png" alt="Universidade Federal do Rio de Janeiro" title="Universidade Federal do Rio de Janeiro" width="100px">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="http://www.ufrj.br" title="Universidade Federal do Rio de Janeiro">
-                            <strong>
-                                Universidade Federal do Rio de Janeiro - UFRJ
-                            </strong>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="img_parceiros" style="text-align: center;">
                         <a href="http://www.ufg.br" title="Universidade Federal de Goiás">
                             <img src="<%=request.getContextPath()%>/resources/images/parceiros/ufg.png" alt="Universidade Federal de Goiás" title="Universidade Federal de Goiás" width="70px">
                         </a>

@@ -7,10 +7,7 @@
         <li class="item_menu"><a href="<%=request.getContextPath()%>/centrosderecursos" title="Centros de Recursos">Centros de Recursos</a></li>
         <li class="item_menu"><a href="<%=request.getContextPath()%>/cursos" title="Cursos">Cursos</a></li>
         <li class="item_menu"><a href="http://moodle.brmz.uff.br/login/" target="_blank" title="Sala da Coordenação">Sala da Coordenação</a></li>
-        <li class="item_menu"><a href="<%=request.getContextPath()%>/links" title="Sítios Úteis">Sítios Úteis</a></li>
-    </ul><br />
-    <ul class="menubv">
-        <li class="topico_menu"><a href="<%=request.getContextPath()%>/contato" title="Contato">Contato</a></li>
+        <li class="item_menu"><a href="<%=request.getContextPath()%>/links" title="Sites Úteis">Sites Úteis</a></li>
         <li class="item_menu"><a href="<%=request.getContextPath()%>/faleconosco" title="Fale Conosco">Fale Conosco</a></li>
     </ul><br />
     <ul class="menubv">
