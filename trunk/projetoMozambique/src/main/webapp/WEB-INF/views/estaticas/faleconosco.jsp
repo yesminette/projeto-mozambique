@@ -25,19 +25,18 @@
             E-mail: <a href="mailto:uabmz@capes.gov.br">uabmz@capes.gov.br</a>
         </p>
         <p>
-            Telefone: +55 61 2022-6400
+            Telefone (Brasil): +55 61 2022-6400
         </p>
-        <p></p>
-        <p>
+        <p style="margin-top: 20px">
             <strong>
                 Programa de Apoio à Expansão da Educação Superior a Distância na República de Moçambique - Cooperação Moçambique-Brasil
             </strong>
         </p>
         <p>
-            E-mail: ead.brasil.mocambique@gmail.com
+            E-mail: <a href="mailto:ead.brasil.mocambique@gmail.com">ead.brasil.mocambique@gmail.com</a>
         </p>
         <p>
-            Telefone: +258 84 713-7145
+            Telefone (Moçambique): +258 84 713-7145
         </p>
     </div>
 </div>

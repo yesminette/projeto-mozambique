@@ -16,7 +16,7 @@
                 <td style="padding: 0px 10px;text-align: right" colspan="2">
                     <div class="box_parceiros">
                         <a href="http://www.abc.gov.br">
-                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/abc.png" alt="Agência Brasileira de Cooperação - ABC" title="Agência Brasileira de Cooperação - ABC" width="90px">
+                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/abc.png" alt="Agência Brasileira de Cooperação - ABC" title="Agência Brasileira de Cooperação - ABC" width="89px">
                         </a>
                     </div>
                     <div class="box_parceiros">
