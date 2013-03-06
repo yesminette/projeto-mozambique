@@ -57,6 +57,14 @@
     </li>
 </ul>
 
+<ul>
+    <li>
+        <strong>
+            E-mail: <br />
+        </strong>
+        polomaputo@hotmail.com <br />
+    </li>
+</ul>
 
 <div style="margin: 40px 0px 20px;">
     Fotos (clique para ampliar):
