@@ -62,7 +62,7 @@
         <strong>
             E-mail: <br />
         </strong>
-        polo.ead.upbeira@gmail.com <br />
+        <a href="mailto:polo.ead.upbeira@gmail.com">polo.ead.upbeira@gmail.com</a> <br />
     </li>
 </ul>
 

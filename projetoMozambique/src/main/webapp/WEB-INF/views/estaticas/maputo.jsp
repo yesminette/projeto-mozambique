@@ -62,7 +62,7 @@
         <strong>
             E-mail: <br />
         </strong>
-        polomaputo@hotmail.com <br />
+        <a href="mailto:polomaputo@hotmail.com">polomaputo@hotmail.com</a> <br />
     </li>
 </ul>
 

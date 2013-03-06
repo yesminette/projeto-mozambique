@@ -63,7 +63,7 @@
         <strong>
             E-mail: <br />
         </strong>
-        pololichinga@hotmail.com <br />
+        <a href="mailto:pololichinga@hotmail.com">pololichinga@hotmail.com</a> <br />
     </li>
 </ul>
 
