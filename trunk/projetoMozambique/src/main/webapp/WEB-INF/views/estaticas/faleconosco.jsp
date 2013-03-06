@@ -27,7 +27,7 @@
         <p>
             Telefone (Brasil): +55 61 2022-6400
         </p>
-        <p style="margin-top: 20px">
+        <p style="margin-top: 50px">
             <strong>
                 Programa de Apoio à Expansão da Educação Superior a Distância na República de Moçambique - Cooperação Moçambique-Brasil
             </strong>

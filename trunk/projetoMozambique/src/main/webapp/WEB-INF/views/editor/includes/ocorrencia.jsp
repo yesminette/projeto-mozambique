@@ -54,7 +54,7 @@
                 conf = (Conferencia) ocorrencia;
             }
         %>
-        <label>Cliente <input size="50" type="text" name="cliente" id="cliente" value="<%=conf.getCliente() == null ? "" : conf.getCliente()%>" /></label>
+        <label>Cliente <input size="68" type="text" name="cliente" id="cliente" value="<%=conf.getCliente() == null ? "" : conf.getCliente()%>" /></label>
     </div>
     <div id="box_url" style="display: none">
         <%
@@ -64,31 +64,31 @@
             }
         %>
         <sec:authorize ifAnyGranted="SITE_ADMIN,SITE_WEBCONF" >
-            <label>URL Acesso <input size="50" type="text" name="url_acesso" id="url_acesso" value="<%=webConf.getUrlAcesso() == null ? "" : webConf.getUrlAcesso()%>" /></label><br />
-            <label>URL Gravação <input size="50" type="text" name="url_gravacao" id="url_gravacao" value="<%=webConf.getUrlGravacao() == null ? "" : webConf.getUrlGravacao()%>" /></label>
+            <label>URL Acesso <input size="64" type="text" name="url_acesso" id="url_acesso" value="<%=webConf.getUrlAcesso() == null ? "" : webConf.getUrlAcesso()%>" /></label><br />
+            <label>URL Gravação <input size="62" type="text" name="url_gravacao" id="url_gravacao" value="<%=webConf.getUrlGravacao() == null ? "" : webConf.getUrlGravacao()%>" /></label>
             </sec:authorize>
     </div>
 
 
     <h2>Nome da Ocorrência</h2>
-    <input type="text" name="nome" id="nome" value="<%=ocorrencia.getNome() == null ? "" : ocorrencia.getNome()%>" maxlength="250" size="50" /><span id="dica_titulo">250</span>
+    <input type="text" name="nome" id="nome" value="<%=ocorrencia.getNome() == null ? "" : ocorrencia.getNome()%>" maxlength="250" size="75" /><span id="dica_titulo">250</span>
     <br />
 
     <div>
         <h2>Início/Fim</h2>
         <span>
-            De <input value="<%=ocorrencia.getInicio() == null ? "" : DataConverter.converterData(ocorrencia.getInicio(), Data.DDMMAAAA)%>" type="text" id="inicio" name="inicio" size="10" />
+            De <input value="<%=ocorrencia.getInicio() == null ? "" : DataConverter.converterData(ocorrencia.getInicio(), Data.DDMMAAAA)%>" type="text" id="inicio" name="inicio" size="20" />
         </span>
         <span> até
-            <input value="<%=ocorrencia.getFim() == null ? "" : DataConverter.converterData(ocorrencia.getFim(), Data.DDMMAAAA)%>" type="text" id="fim" name="fim" size="10" />
+            <input value="<%=ocorrencia.getFim() == null ? "" : DataConverter.converterData(ocorrencia.getFim(), Data.DDMMAAAA)%>" type="text" id="fim" name="fim" size="20" />
         </span>
     </div>
 
     <h2>Local</h2>
-    <input type="text" name="local_ocorrencia" id="local_ocorrencia" value="<%=ocorrencia.getLocalOcorrencia() == null ? "" : ocorrencia.getLocalOcorrencia()%>" maxlength="250" size="78" /><span id="dica_titulo">250</span>
+    <input type="text" name="local_ocorrencia" id="local_ocorrencia" value="<%=ocorrencia.getLocalOcorrencia() == null ? "" : ocorrencia.getLocalOcorrencia()%>" maxlength="250" size="75" /><span id="dica_titulo">250</span>
 
     <h2>Mapa</h2>
-    <input type="text" name="mapa" id="mapa" value="<%=ocorrencia.getMapa() == null ? "" : ocorrencia.getMapa()%>" maxlength="700" size="78" />
+    <input type="text" name="mapa" id="mapa" value="<%=ocorrencia.getMapa() == null ? "" : ocorrencia.getMapa()%>" maxlength="700" size="75" />
     <div id="dica_mapa">dica: Endereço do local com Google Maps. (width="380" height="220")</div>
 
     <h2>Descrição</h2>
@@ -141,32 +141,56 @@
         }
 
         $(function() {
-            $( "#inicio" ).datepicker({ dateFormat: 'dd/mm/yyyy' });
-            $( "#fim" ).datepicker({ dateFormat: 'dd/mm/yyyy' });
+            $( "#inicio" ).datepicker({
+                dateFormat: 'dd/mm/yy',
+                dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+                dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+                monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+                nextText: 'Próximo',
+                prevText: 'Anterior',
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown'
+            });
+            $( "#fim" ).datepicker({
+                dateFormat: 'dd/mm/yy',
+                dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+                dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+                monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+                nextText: 'Próximo',
+                prevText: 'Anterior',
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown'
+            });
         });
 
         //Validação-------------
         $.validator.addMethod(
-            "data",
-            function(value, element) {
-                var check = false;
-                var re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
-                if( re.test(value)){
-                    var adata = value.split('/');
-                    var dd = parseInt(adata[0],10);
-                    var mm = parseInt(adata[1],10);
-                    var yyyy = parseInt(adata[2],10)
-                    var xdata = new Date(yyyy,mm-1,dd);
-                    if ( ( xdata.getFullYear() == yyyy ) && ( xdata.getMonth () == mm - 1 ) && ( xdata.getDate() == dd ) )
-                        check = true;
-                    else
-                        check = false;
-                } else
+        "data",
+        function(value, element) {
+            var check = false;
+            var re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+            if( re.test(value)){
+                var adata = value.split('/');
+                var dd = parseInt(adata[0],10);
+                var mm = parseInt(adata[1],10);
+                var yyyy = parseInt(adata[2],10)
+                var xdata = new Date(yyyy,mm-1,dd);
+                if ( ( xdata.getFullYear() == yyyy ) && ( xdata.getMonth () == mm - 1 ) && ( xdata.getDate() == dd ) )
+                    check = true;
+                else
                     check = false;
-                return this.optional(element) || check;
-            },
-            "Essa data não é válida."
-        );
+            } else
+                check = false;
+            return this.optional(element) || check;
+        },
+        "Essa data não é válida."
+    );
         $(document).ready( function() {
             $("#form").validate({
                 // Define as regras
