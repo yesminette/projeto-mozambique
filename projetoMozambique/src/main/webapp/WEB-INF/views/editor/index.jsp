@@ -24,7 +24,7 @@
         <script src="<%=request.getContextPath()%>/resources/scripts/jquery.js" type="text/javascript"></script>
         <script src="<%=request.getContextPath()%>/resources/scripts/jquery.validate.js" type="text/javascript"></script>
         <script src="<%=request.getContextPath()%>/resources/scripts/uteis.js" type="text/javascript"></script>
-        <script src="<%=request.getContextPath()%>/resources/scripts/jquery-ui/js/jquery-ui.js" type="text/javascript"></script>
+        <script src="<%=request.getContextPath()%>/resources/scripts/jquery-ui/js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="<%=request.getContextPath()%>/resources/scripts/jquery.meio.mask.js" type="text/javascript"></script>
 
         <script type="text/javascript">
