@@ -13,7 +13,7 @@
     <p class="ui-widget-header">Fale Conosco</p>
     <div class="conteudo">
         <p>
-            Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)
+            <strong>Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)</strong>
         </p>
         <p>
             Diretoria de Educação a Distância (DED)
@@ -25,7 +25,19 @@
             E-mail: <a href="mailto:uabmz@capes.gov.br">uabmz@capes.gov.br</a>
         </p>
         <p>
-            Telefone: + 55 61 2022 6400
+            Telefone: +55 61 2022-6400
+        </p>
+        <p></p>
+        <p>
+            <strong>
+                Programa de Apoio à Expansão da Educação Superior a Distância na República de Moçambique - Cooperação Moçambique-Brasil
+            </strong>
+        </p>
+        <p>
+            E-mail: ead.brasil.mocambique@gmail.com
+        </p>
+        <p>
+            Telefone: +258 84 713-7145
         </p>
     </div>
 </div>
