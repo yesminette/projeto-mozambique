@@ -182,7 +182,7 @@ public class BuscaController {
     }
 
     public String getOcorrencias(int limite) {
-        return geraXmlOcorrencias(Ocorrencia.getOcorrencias(limite));
+        return geraXmlOcorrencias(Ocorrencia.getOcorrenciasMaisProximas(limite));
     }
 
     public String getOcorrencias(int limite, int mes, int ano) {

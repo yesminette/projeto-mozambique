@@ -59,10 +59,16 @@
         <property name="minPoolSize" value="${database.minPoolSize}" />
         <property name="maxPoolSize" value="${database.maxPoolSize}" />
         <!-- <property name="timeout"><value>0</value></property> -->   <!-- 0 means: no timeout -->
-        <property name="idleConnectionTestPeriod" value="${database.idleConnectionTestPeriod}" />
         <property name="acquireIncrement" value="${database.acquireIncrement}" />
         <property name="maxStatements" value="${database.maxStatements}" /><!-- 0 means: statement caching is turned off.  -->
         <property name="numHelperThreads" value="${database.numHelperThreads}" /><!-- 3 is default -->
+        <property name="acquireRetryAttempts" value="${database.acquireRetryAttempts}" />
+        <property name="acquireRetryDelay" value="${database.acquireRetryDelay}" />
+        <property name="breakAfterAcquireFailure" value="${database.breakAfterAcquireFailure}" />
+        <property name="maxConnectionAge" value="${database.maxConnectionAge}" />
+        <property name="maxIdleTime" value="${database.maxIdleTime}" />
+        <property name="maxIdleTimeExcessConnections" value="${database.maxIdleTimeExcessConnections}" />
+        <property name="idleConnectionTestPeriod" value="${database.idleConnectionTestPeriod}" />
     </bean>
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>

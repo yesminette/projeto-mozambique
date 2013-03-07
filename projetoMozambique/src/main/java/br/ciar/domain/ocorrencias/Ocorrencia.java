@@ -219,6 +219,10 @@ public class Ocorrencia implements Serializable {
     public static List<Ocorrencia> getOcorrencias(int limite) {
         return findOcorrenciaEntries(0, limite);
     }
+    
+    public static List<Ocorrencia> getOcorrenciasMaisProximas(int limite) {
+        return entityManager().createQuery("SELECT o FROM Ocorrencia o ORDER BY (CASE WHEN (now()-o.inicio)<0 THEN 0 ELSE 1 END), ABS( DATEDIFF( o.inicio, NOW() ) ), o.inicio DESC, o.fim DESC", Ocorrencia.class).setFirstResult(0).setMaxResults(limite).getResultList();
+    }
 
     public static List<Ocorrencia> getOcorrencias(int limite, int mes, int ano) {
         Calendar calendar = Calendar.getInstance();
