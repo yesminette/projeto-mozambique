@@ -85,11 +85,12 @@
     
     var tamanho_descricao = 130;
     var tamanho_titulo = 60;
+    var limite_noticias = 4;
     
     jQuery.ajax({
         type: "GET",
         cache: false,
-        url: "busca?data="+d.getDate()+"&tipo=1&limite=6",
+        url: "busca?data="+d.getDate()+"&tipo=1&limite="+limite_noticias,
         dataType: "xml",
         success: function(xml) {
             jQuery(xml).find('item').each(function(){
@@ -110,12 +111,11 @@
 
 
     jQuery(function() {
-
         jQuery('#chave').keyup(function() {
             jQuery.ajax({
                 type: "GET",
                 cache:false,
-                url: "busca?data="+d.getDate()+"&tipo=2&limite=5&chavebusca="+jQuery('#chave').val()+"",
+                url: "busca?data="+d.getDate()+"&tipo=2&limite="+limite_noticias+"&chavebusca="+jQuery('#chave').val()+"",
                 dataType: "xml",
                 success: function(xml) {
                     document.getElementById("noticias").innerHTML = "";
