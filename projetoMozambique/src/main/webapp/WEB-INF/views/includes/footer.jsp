@@ -1,3 +1,4 @@
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <style type="text/css">
     .box_parceiros {
         display: inline-block;
@@ -16,22 +17,22 @@
                 <td style="padding: 0px 10px;text-align: right" colspan="2">
                     <div class="box_parceiros">
                         <a href="http://www.abc.gov.br">
-                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/abc.png" alt="Agência Brasileira de Cooperação - ABC" title="Agência Brasileira de Cooperação - ABC" width="89px">
+                            <img src="<%=CFG.contextPath%>/resources/images/parceiros/abc.png" alt="Agência Brasileira de Cooperação - ABC" title="Agência Brasileira de Cooperação - ABC" width="89px">
                         </a>
                     </div>
                     <div class="box_parceiros">
                         <a href="http://www.capes.gov.br">
-                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/capes.png" alt="Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES" title="Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES" width="90px">
+                            <img src="<%=CFG.contextPath%>/resources/images/parceiros/capes.png" alt="Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES" title="Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES" width="90px">
                         </a>
                     </div>
                     <div class="box_parceiros">
                         <a href="http://www.brasil.gov.br">
-                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/brasil2.png" alt="Governo do Brasil" title="Governo do Brasil" width="495px">
+                            <img src="<%=CFG.contextPath%>/resources/images/parceiros/brasil2.png" alt="Governo do Brasil" title="Governo do Brasil" width="495px">
                         </a>
                     </div>
                     <div class="box_parceiros">
                         <a href="http://www.portaldogoverno.gov.mz">
-                            <img src="<%=request.getContextPath()%>/resources/images/parceiros/moz.png" alt="Governo de Moçambique" title="Governo de Moçambique" width="80px">
+                            <img src="<%=CFG.contextPath%>/resources/images/parceiros/moz.png" alt="Governo de Moçambique" title="Governo de Moçambique" width="80px">
                         </a>
                     </div>
                 </td>

@@ -1,4 +1,4 @@
-<p>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <style>
     a:link,
     a:visited{
@@ -10,7 +10,8 @@
         text-decoration: underline;
     }
 </style>
-    <a href="<%=request.getContextPath()%>/resources/arquivos/folder_programa_br_mz_fev_2013.pdf" >
+<p>
+    <a href="<%=CFG.contextPath%>/resources/arquivos/folder_programa_br_mz_fev_2013.pdf" >
         Acesse o Folder do Programa
     </a>
 </p>
@@ -26,7 +27,7 @@
 </p>
 <p>
     Os cursos funcionam no modelo adotado pela <strong>Universidade Aberta do 
-    Brasil</strong> (UAB), mas algumas adequações estão sendo implementadas 
+        Brasil</strong> (UAB), mas algumas adequações estão sendo implementadas 
     frente à realidade de Moçambique.
 </p>
 <p>    
@@ -39,7 +40,7 @@
     outros três cursos de licenciatura 180 vagas para cada curso. Um total de 
     <strong>630 estudantes</strong>.
 </p>
-<img class="imagem_programa" src="<%=request.getContextPath()%>/resources/images/mocambique/programa/polo_maputo.png" alt="Polo de Maputo (CPED - Llanguene)" title="Polo de Maputo (CPED - Llanguene)" />
+<img class="imagem_programa" src="<%=CFG.contextPath%>/resources/images/mocambique/programa/polo_maputo.png" alt="Polo de Maputo (CPED - Llanguene)" title="Polo de Maputo (CPED - Llanguene)" />
 <p class="legenda">
     Polo de Maputo (CPED - Llanguene)
 </p>
@@ -58,7 +59,7 @@
     Universidade Federal Fluminense, a Universidade Federal do Estado do Rio de 
     Janeiro e a Universidade Federal de Juiz de Fora.
 </p>
-<img class="imagem_programa" src="<%=request.getContextPath()%>/resources/images/mocambique/programa/polo_beira.png" alt="Polo de Beira (CEAD/UP)" title="Polo de Beira (CEAD/UP)" />
+<img class="imagem_programa" src="<%=CFG.contextPath%>/resources/images/mocambique/programa/polo_beira.png" alt="Polo de Beira (CEAD/UP)" title="Polo de Beira (CEAD/UP)" />
 <p class="legenda">
     Polo de Beira (CEAD/UP)
 </p>
@@ -75,7 +76,7 @@
     São estudantes matriculados numa universidade moçambicana e, ao mesmo 
     tempo, em uma das quatro universidades federais anteriormente mencionadas.
 </p>
-<img class="imagem_programa" src="<%=request.getContextPath()%>/resources/images/mocambique/programa/polo_lichinga.png" alt="Polo de Lichinga (CPED Niassa)" title="Polo de Lichinga (CPED Niassa)" />
+<img class="imagem_programa" src="<%=CFG.contextPath%>/resources/images/mocambique/programa/polo_lichinga.png" alt="Polo de Lichinga (CPED Niassa)" title="Polo de Lichinga (CPED Niassa)" />
 <p class="legenda">
     Polo de Lichinga (CPED Niassa)
 </p>

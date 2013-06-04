@@ -1,3 +1,4 @@
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="br.ciar.domain.ocorrencias.Conferencia"%>
 <%@page import="br.ciar.domain.ocorrencias.EncontroPresencial"%>
 <%@page import="br.ciar.domain.ocorrencias.WebConferencia"%>
@@ -129,13 +130,13 @@
             var tipoOcorrencia = $('input[name=tipo]').val();
     <%}%>
             if(tipoOcorrencia == 'evento'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/evento');
+                $('#form').attr("action", '<%=CFG.contextPath%>/evento');
             }
             if(tipoOcorrencia == 'web_conferencia'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/web_conferencia');
+                $('#form').attr("action", '<%=CFG.contextPath%>/web_conferencia');
             }
             if(tipoOcorrencia == 'encontro_presencial'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/encontro_presencial');
+                $('#form').attr("action", '<%=CFG.contextPath%>/encontro_presencial');
             }
             $('#form').submit();
         }

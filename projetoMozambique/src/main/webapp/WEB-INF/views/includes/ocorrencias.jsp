@@ -1,9 +1,4 @@
-<%-- 
-    Document   : ocorrencias
-    Created on : 28/03/2011, 13:08:16
-    Author     : Carlo Rafael Rodovaho Cesar
---%>
-
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="java.util.Calendar"%>
 <h1>Agenda de Eventos</h1>
 <select name="ano" id="ano" style="width:80px;">
@@ -69,13 +64,13 @@
 
 
     function getOcorrencias(tipo,limite,ano,mes){
-        var url_get = "<%=request.getContextPath()%>/busca?";
+        var url_get = "<%=CFG.contextPath%>/busca?";
         if(limite!=null) url_get += "&limite="+limite;
         if(tipo!=null) url_get += "&tipo="+tipo;
         if(ano!=null) url_get += "&ano="+ano;
         if(mes!=null) url_get += "&mes="+mes;
         url_get = url_get.replace('&', '');
-        jQuery("#ocorrencias_panel").html('<img src="<%=request.getContextPath()%>/resources/images/wait.gif" alt="Aguarde..." style="padding:70px 0px 0px 350px;" />');
+        jQuery("#ocorrencias_panel").html('<img src="<%=CFG.contextPath%>/resources/images/wait.gif" alt="Aguarde..." style="padding:70px 0px 0px 350px;" />');
 
         jQuery.ajax({
             type: "GET",
@@ -96,7 +91,7 @@
                     var periodo = (inicio == fim) ? inicio : inicio+' - '+fim;
                     
                     jQuery('<li></li>')
-                    .html('<span class="data">'+periodo+'</span> - <a href="<%=request.getContextPath()%>/ocorrencias/'+numero+'" title="Ocorrencia">'+titulo+'</a>')
+                    .html('<span class="data">'+periodo+'</span> - <a href="<%=CFG.contextPath%>/ocorrencias/'+numero+'" title="Ocorrencia">'+titulo+'</a>')
                     .appendTo('#ocorrencias_panel');
                     count++;
                 }); //close each(

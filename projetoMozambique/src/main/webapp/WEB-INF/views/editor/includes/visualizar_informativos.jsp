@@ -1,9 +1,4 @@
-<%--
-    Document   : visualizar_informativos
-    Created on : 28/04/2011, 05:58:41
-    Author     : Carlo Rafael Rodovalho Cesar
---%>
-
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="br.ciar.utils.DataConverter.Data"%>
 <%@page import="br.ciar.utils.DataConverter"%>
 <%@page import="br.ciar.domain.informativos.Noticia"%>
@@ -23,14 +18,14 @@
     %><h3><a href='#'><%=informativo.getTitulo()%> - <%=DataConverter.converterData(informativo.getDataInformativo(), Data.DDMMAAAAHHMM)%></a></h3>
     <div>
         <div><%=informativo.getDescricao() != null ? informativo.getDescricao() : ""%></div><br />
-        <a href="<%=request.getContextPath()%>/informativos/alterar/<%=informativo.getId()%>">Editar</a> |
+        <a href="<%=CFG.contextPath%>/informativos/alterar/<%=informativo.getId()%>">Editar</a> |
         <a href="javascript:excluir(<%=informativo.getId()%>)">Excluir</a>
         <%if (informativo instanceof Noticia) {
             Noticia noticia = (Noticia) informativo;
-        %>| <a href="<%=request.getContextPath()%>/noticia/<%=noticia.getId()%>/galeria/novo">Enviar Fotos</a>
+        %>| <a href="<%=CFG.contextPath%>/noticia/<%=noticia.getId()%>/galeria/novo">Enviar Fotos</a>
         <%
             if (noticia.temGaleria()) {%>
-        | <a href="<%=request.getContextPath()%>/noticia/<%=noticia.getId()%>/galeria/<%=noticia.getGaleria().getId()%>/fotos">Excluir Fotos</a>
+        | <a href="<%=CFG.contextPath%>/noticia/<%=noticia.getId()%>/galeria/<%=noticia.getGaleria().getId()%>/fotos">Excluir Fotos</a>
         <%  }
                             }%>
 
@@ -54,7 +49,7 @@
         if (x){
             var form = document.createElement("form");
             form.setAttribute("method", "POST");
-            form.setAttribute("action", "<%=request.getContextPath()%>/informativos/"+id);
+            form.setAttribute("action", "<%=CFG.contextPath%>/informativos/"+id);
             var deleteHiddenField = document.createElement("input");
             deleteHiddenField.setAttribute("name", "_method");
             deleteHiddenField.setAttribute("value", "DELETE");

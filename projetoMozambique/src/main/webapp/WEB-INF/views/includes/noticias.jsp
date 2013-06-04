@@ -1,8 +1,4 @@
-<%--
-    Document   : noticias
-    Created on : 12/04/2011, 18:14:47
-    Author     : Carlo Rafael Rodovalho Cesar
---%>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
@@ -83,14 +79,14 @@
         }
 
         function getNoticias(limite,tipo,chaveBusca,categoria,pagina){
-            var url_get = "<%=request.getContextPath()%>/busca?";
+            var url_get = "<%=CFG.contextPath%>/busca?";
             if(limite!=null) url_get += "&limite="+limite;
             if(tipo!=null) url_get += "&tipo="+tipo;
             if(chaveBusca!=null) url_get += "&chavebusca="+chaveBusca;
             if(categoria!=null) url_get += "&categoria="+categoria;
             if(pagina!=null) url_get += "&pagina="+pagina;
             url_get = url_get.replace('&', '');
-            jQuery("#noticias_todas").html('<img src="<%=request.getContextPath()%>/resources/images/wait.gif" alt="Aguarde..." style="padding:70px 0px 0px 350px;" />');
+            jQuery("#noticias_todas").html('<img src="<%=CFG.contextPath%>/resources/images/wait.gif" alt="Aguarde..." style="padding:70px 0px 0px 350px;" />');
 
             jQuery.ajax({
                 type: "GET",
@@ -105,7 +101,7 @@
                         var numero = jQuery(this).find('numero').text()
                         var data = jQuery(this).find('pubDate').text()
                         jQuery('<div style=""></div>')
-                        .html('<table><tr><td rowspan="2"><img title="'+data+'" class="img_chamada" src="<%=caminhoImagensNoticias%>'+numero+'.jpg" width="70" height="70" alt="" onerror="this.remove()"></td><td class="content"><a href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'"><span class="topico">'+titulo+'</span></a></td></tr><tr><td class="content"><div class="data">'+data+'</div>'+descricao+'<br /></td></tr></table>')
+                        .html('<table><tr><td rowspan="2"><img title="'+data+'" class="img_chamada" src="<%=caminhoImagensNoticias%>'+numero+'.jpg" width="70" height="70" alt="" onerror="this.remove()"></td><td class="content"><a href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'"><span class="topico">'+titulo+'</span></a></td></tr><tr><td class="content"><div class="data">'+data+'</div>'+descricao+'<br /></td></tr></table>')
                         .appendTo('#noticias_todas');
                     }); //close each(
                     mostrarPaginas(xml);

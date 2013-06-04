@@ -1,8 +1,4 @@
-<%-- 
-    Document   : fotos
-    Created on : 10/05/2011, 11:20:09
-    Author     : Carlo e Lauro
---%>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="java.util.Set"%>
 <%@page import="br.ciar.domain.informativos.fotografia.Foto"%>
 <%
@@ -20,7 +16,7 @@
 <%
             }
             if(fotos.size() <= 0){
-                %>Não há fotos para esse informativo.<br /><a href="<%=request.getContextPath()%>/informativos/lista" >Voltar</a><%
+                %>Não há fotos para esse informativo.<br /><a href="<%=CFG.contextPath%>/informativos/lista" >Voltar</a><%
             }
 %>
 <script>
@@ -29,7 +25,7 @@
         if (x){
             var form = document.createElement("form");
             form.setAttribute("method", "POST");
-            form.setAttribute("action", "<%=request.getContextPath()%>/noticia/<%=idNoticia%>/galeria/<%=idGaleria%>/fotos/"+id);
+            form.setAttribute("action", "<%=CFG.contextPath%>/noticia/<%=idNoticia%>/galeria/<%=idGaleria%>/fotos/"+id);
             var deleteHiddenField = document.createElement("input");
             deleteHiddenField.setAttribute("name", "_method");
             deleteHiddenField.setAttribute("value", "DELETE");

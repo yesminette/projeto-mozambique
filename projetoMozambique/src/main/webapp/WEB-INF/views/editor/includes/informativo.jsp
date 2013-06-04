@@ -1,3 +1,4 @@
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="br.ciar.domain.informativos.Noticia"%>
 <%@page import="br.ciar.domain.informativos.Comunicado"%>
@@ -205,16 +206,16 @@
                 var tipoInformativo = $('input[name=tipo]').val();
             <%}%>
             if(tipoInformativo == 'noticia'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/noticia');
+                $('#form').attr("action", '<%=CFG.contextPath%>/noticia');
             }
             if(tipoInformativo == 'review'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/review');
+                $('#form').attr("action", '<%=CFG.contextPath%>/review');
             }
             if(tipoInformativo == 'artigo'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/artigo');
+                $('#form').attr("action", '<%=CFG.contextPath%>/artigo');
             }
             if(tipoInformativo == 'comunicado'){
-                $('#form').attr("action", '<%=request.getContextPath()%>/comunicado');
+                $('#form').attr("action", '<%=CFG.contextPath%>/comunicado');
             }
             $('#form').submit();
         }

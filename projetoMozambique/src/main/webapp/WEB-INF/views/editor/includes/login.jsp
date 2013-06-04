@@ -1,8 +1,4 @@
-<%-- 
-    Document   : login
-    Created on : 27/04/2011, 15:14:30
-    Author     : Carlo Rafael Rodovalho Cesar
---%>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="org.springframework.security.web.authentication.AuthenticationProcessingFilter"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
@@ -12,7 +8,7 @@
 
 <sec:authorize access="!isAuthenticated()" >
     <h1>Acesso</h1>
-    <form id="formid" method="post" action="<%=request.getContextPath()%>/resources/j_spring_security_check">
+    <form id="formid" method="post" action="<%=CFG.contextPath%>/resources/j_spring_security_check">
         <%if (falhaAutenticacao){%><span class="errorMessage">Nome de usuário ou senha incorretos!</span><%}%>
         <div id="login">
             <input id="j_username" name="j_username" type="text" class="lform" size="20" />
