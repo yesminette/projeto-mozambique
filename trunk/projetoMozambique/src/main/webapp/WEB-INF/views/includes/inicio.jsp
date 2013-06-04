@@ -14,7 +14,7 @@
                 <span id="titulo">Informativos</span>
                 <input name="chave" type="text" id="chave" style="width:200px;margin-left:10px" placeholder="Busca"/>
                 <span class="vermais">
-                    <a href="<%=request.getContextPath()%>/informativos/noticias#x" style="margin-left: 20px;">ver todos</a>
+                    <a href="<%=CFG.contextPath%>/informativos/noticias#x" style="margin-left: 20px;">ver todos</a>
                 </span>
                 <div class="componente_noticias_index" id="noticias">
 
@@ -22,7 +22,7 @@
             </div>
         </td>
         <td>
-            <div id="eventos" class="box"><span class="topico_box">Agenda de Eventos <a href="<%=request.getContextPath()%>/ocorrencias"><span class="vermais" style="margin-left:30px; "> ver todos</a></span></span>
+            <div id="eventos" class="box"><span class="topico_box">Agenda de Eventos <a href="<%=CFG.contextPath%>/ocorrencias"><span class="vermais" style="margin-left:30px; "> ver todos</a></span></span>
                 <ul id="ocorrencias_panel">
 
                 </ul>
@@ -54,11 +54,11 @@
                     if(numero != <%=CFG.ID_CLIPPING%>){
                         jQuery('#slideshow')
                         .append('<li id="slide'+z+'">'
-                            +'<a href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'" title="'+titulo+'" style="display: none">'
+                            +'<a href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'" title="'+titulo+'" style="display: none">'
                             +'<img width="'+width+'" height="'+height+'" title="'+titulo+'" src="'+imagem+'" alt="'+titulo+'">'
                             +'</a>'
                             +'<div class="slideshow-caption" style="display: none;">'
-                            +'<a href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'">'
+                            +'<a href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'">'
                             +'<p><strong>'+titulo+'</strong></p>'
                             +'<p class="data">'+data+'</p><br />'
                             +'<p>'+descricao+'. Leia mais »</p>'
@@ -100,7 +100,7 @@
                 var data = jQuery(this).find('pubDate').text()
                 if(numero != <%=CFG.ID_CLIPPING%>){
                     jQuery('<div></div>')
-                    .html('<a href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'" title="'+titulo+'"><span class="topico">'+reduzirParaCaber(titulo,tamanho_titulo)+'</span></a></td></tr><tr><td><a class="descricao" href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'"><div id="data" class="data">'+data+'</div>'+reduzirParaCaber(descricao,tamanho_descricao)+'</a><br />')
+                    .html('<a href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'" title="'+titulo+'"><span class="topico">'+reduzirParaCaber(titulo,tamanho_titulo)+'</span></a></td></tr><tr><td><a class="descricao" href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'"><div id="data" class="data">'+data+'</div>'+reduzirParaCaber(descricao,tamanho_descricao)+'</a><br />')
                     .appendTo('#noticias');
                 }
             }); //close each(
@@ -125,7 +125,7 @@
                         var numero = jQuery(this).find('numero').text()
                         var data = jQuery(this).find('pubDate').text()
                         jQuery('<div class="noticia"></div>')
-                        .html('<a href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'" title="'+titulo+'"><span class="topico">'+reduzirParaCaber(titulo,tamanho_titulo)+'</span></a></td></tr><tr><td><a class="descricao" href="<%=request.getContextPath()%>/informativos/noticia/'+numero+'"><div id="data" class="data">'+data+'</div>'+reduzirParaCaber(descricao,tamanho_descricao)+'</a><br />')
+                        .html('<a href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'" title="'+titulo+'"><span class="topico">'+reduzirParaCaber(titulo,tamanho_titulo)+'</span></a></td></tr><tr><td><a class="descricao" href="<%=CFG.contextPath%>/informativos/noticia/'+numero+'"><div id="data" class="data">'+data+'</div>'+reduzirParaCaber(descricao,tamanho_descricao)+'</a><br />')
                         .appendTo('#noticias');
                     }); //close each(
                 }
@@ -142,7 +142,7 @@
         if(ano!=null) url_get += "&ano="+ano;
         if(mes!=null) url_get += "&mes="+mes;
         url_get = url_get.replace('&', '');
-        jQuery("#ocorrencias_panel").html('<img src="<%=request.getContextPath()%>/resources/images/wait.gif" alt="Aguarde..." style="padding:70px 0px 0px 350px;" />');
+        jQuery("#ocorrencias_panel").html('<img src="<%=CFG.contextPath%>/resources/images/wait.gif" alt="Aguarde..." style="padding:70px 0px 0px 350px;" />');
 
         jQuery.ajax({
             type: "GET",
@@ -163,7 +163,7 @@
                     var periodo = (inicio == fim) ? inicio : inicio+' - '+fim;
                     
                     jQuery('<li></li>')
-                    .html('<span class="data">'+periodo+'</span> - <a href="<%=request.getContextPath()%>/ocorrencias/'+numero+'" title="Ocorrencia">'+titulo+'</a>')
+                    .html('<span class="data">'+periodo+'</span> - <a href="<%=CFG.contextPath%>/ocorrencias/'+numero+'" title="Ocorrencia">'+titulo+'</a>')
                     .appendTo('#ocorrencias_panel');
                     count++;
                 }); //close each(

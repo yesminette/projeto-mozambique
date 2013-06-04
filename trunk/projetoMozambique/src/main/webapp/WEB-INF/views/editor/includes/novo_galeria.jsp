@@ -1,12 +1,8 @@
-<%--
-    Document   : visualizar_informativos
-    Created on : 28/04/2011, 05:58:41
-    Author     : Carlo Rafael Rodovalho Cesar
---%>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%
         Integer idNoticia = (Integer) request.getAttribute("idNoticia");
 %>
-<form action="<%=request.getContextPath()%>/noticia/<%=idNoticia.intValue()%>/galeria/novo" method="POST" enctype="multipart/form-data" >
+<form action="<%=CFG.contextPath%>/noticia/<%=idNoticia.intValue()%>/galeria/novo" method="POST" enctype="multipart/form-data" >
     <h1>Galeria da Notícia</h1>
     <div id="box_galerias">
         <p>

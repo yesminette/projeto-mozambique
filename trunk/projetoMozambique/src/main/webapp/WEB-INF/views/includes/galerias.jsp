@@ -1,3 +1,4 @@
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="java.util.List"%>
 <%@page import="br.ciar.domain.informativos.Noticia"%>
 
@@ -13,7 +14,7 @@ Serviços Prestados | Solicitação de Serviço | Galeria
                 %><ul class="listagem_agenda" id="galerias_panel"><%
                     for (Noticia noticia : noticias) {
                         if (noticia.getGaleria().getFotos() != null && noticia.getGaleria().getFotos().size() > 0) {
-                            %><li><a href='<%=request.getContextPath()%>/resources/gallery.swf?numero=<%=noticia.getGaleria().getId()%>' rel='lightbox' title='<%=noticia.getTitulo()%>' TAG='SWF' width='700' height='600'><%=noticia.getTitulo()%></a></li><%
+                            %><li><a href='<%=CFG.contextPath%>/resources/gallery.swf?numero=<%=noticia.getGaleria().getId()%>' rel='lightbox' title='<%=noticia.getTitulo()%>' TAG='SWF' width='700' height='600'><%=noticia.getTitulo()%></a></li><%
                         }
                     }
                 %></ul><%

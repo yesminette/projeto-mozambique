@@ -4,11 +4,7 @@
 <%@page import="java.util.List"%>
 <%@page import="org.springframework.web.context.support.SpringBeanAutowiringSupport"%>
 <%@page import="org.springframework.beans.factory.annotation.Autowired"%>
-<%--
-    Document   : visualizar_informativos
-    Created on : 28/04/2011, 05:58:41
-    Author     : Carlo Rafael Rodovalho Cesar
---%>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%
     List<Ocorrencia> ocorrencias = (List<Ocorrencia>) request.getAttribute("ocorrencias");
 %>
@@ -18,9 +14,9 @@
             for (Ocorrencia ocorrencia : ocorrencias) {
     %><h3><a href='#'><%=ocorrencia.getNome()%> <span class="data"><%=DataConverter.converterData(ocorrencia.getInicio(), Data.DDMMAAAA)%> - <%=DataConverter.converterData(ocorrencia.getFim(), Data.DDMMAAAA)%></span></a></h3>
     <div>
-        <a href="<%=request.getContextPath()%>/ocorrencias/alterar/<%=ocorrencia.getId()%>">Editar</a> |
+        <a href="<%=CFG.contextPath%>/ocorrencias/alterar/<%=ocorrencia.getId()%>">Editar</a> |
         <a href="javascript:excluir(<%=ocorrencia.getId()%>)">Excluir</a> |
-        <a href="<%=request.getContextPath()%>/ocorrencias/<%=ocorrencia.getId()%>/comentarios">Comentarios</a>
+        <a href="<%=CFG.contextPath%>/ocorrencias/<%=ocorrencia.getId()%>/comentarios">Comentarios</a>
     </div>
     <%
         }
@@ -46,7 +42,7 @@
             if (x){
                 var form = document.createElement("form");
                 form.setAttribute("method", "POST");
-                form.setAttribute("action", "<%=request.getContextPath()%>/ocorrencias/"+id);
+                form.setAttribute("action", "<%=CFG.contextPath%>/ocorrencias/"+id);
                 var deleteHiddenField = document.createElement("input");
                 deleteHiddenField.setAttribute("name", "_method");
                 deleteHiddenField.setAttribute("value", "DELETE");

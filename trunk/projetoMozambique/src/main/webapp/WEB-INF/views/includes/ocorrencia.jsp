@@ -1,8 +1,4 @@
-<%-- 
-    Document   : ocorrencia
-    Created on : 28/03/2011, 21:04:50
-    Author     : Carlo Rafael Rodovalho Cesar
---%>
+<%@page import="br.ciar.domain.configuracoes.CFG"%>
 <%@page import="java.net.URLEncoder"%>
 <%@page import="br.ciar.domain.ocorrencias.Comentario"%>
 <%@page import="br.ciar.domain.informativos.Noticia"%>
@@ -65,7 +61,7 @@
                         } else {
                             out.println("Ainda não há fotos desse Evento.");
                         }
-        %><a href='<%=request.getContextPath()%>/informativos/noticia/<%=noticia.getId()%>' >Pós-Evento</a><%
+        %><a href='<%=CFG.contextPath%>/informativos/noticia/<%=noticia.getId()%>' >Pós-Evento</a><%
                             } else {
                                 out.println("Não há fotos nem Notícias(Reviews) relacionadas a esse evento.");
                             }
@@ -119,7 +115,7 @@
 
     function comentar(){
         var params = jQuery('form').serialize();
-        var url_post = "<%=request.getContextPath()%>/ocorrencias/<%=ocorrencia.getId()%>/comentar";
+        var url_post = "<%=CFG.contextPath%>/ocorrencias/<%=ocorrencia.getId()%>/comentar";
         jQuery.ajax({
             type: "POST",
             cache:false,
