@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -154,7 +155,7 @@ public class NoticiaController {
 
     @RequestMapping(value = "/{idNoticia}/galeria/{idGaleria}/fotos", method = RequestMethod.GET)
     public ModelAndView fotos(@PathVariable("idNoticia") Integer idNoticia, @PathVariable("idGaleria") Integer idGaleria, HttpServletRequest request) {
-        Set<Foto> fotos = Galeria.findGaleria(idGaleria).getFotos();
+        List<Foto> fotos = Galeria.findGaleria(idGaleria).getFotos();
         String caminhoRelativoThumbs = ParametrosDoSistema.getCaminhoRelativoThumbsGaleria(request);
         ModelAndView view = new ModelAndView("galeria/fotos");
         view.getModel().put("idNoticia", idNoticia);
