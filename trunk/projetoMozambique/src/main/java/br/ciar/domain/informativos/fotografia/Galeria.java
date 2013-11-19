@@ -3,6 +3,7 @@ package br.ciar.domain.informativos.fotografia;
 import java.io.Serializable;
 import org.springframework.beans.factory.annotation.Configurable;
 import br.ciar.domain.informativos.Noticia;
+import java.util.ArrayList;
 import javax.persistence.OneToOne;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -17,6 +18,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OrderBy;
 import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,7 +37,8 @@ public class Galeria implements Serializable {
     private Noticia noticia;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "galeria")
-    private Set<Foto> fotos = new HashSet<Foto>();
+    @OrderBy("data_foto")
+    private List<Foto> fotos = new ArrayList<Foto>();
 
     public Integer getId() {
         return this.id;
@@ -53,11 +56,11 @@ public class Galeria implements Serializable {
         this.noticia = noticia;
     }
 
-    public Set<Foto> getFotos() {
+    public List<Foto> getFotos() {
         return this.fotos;
     }
 
-    public void setFotos(Set<Foto> fotos) {
+    public void setFotos(ArrayList<Foto> fotos) {
         this.fotos = fotos;
     }
 
